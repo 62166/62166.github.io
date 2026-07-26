@@ -1,20 +1,31 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=AW-18300360567"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18300360567"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
 
-  gtag('config', 'AW-18300360567');
-</script>
-  <!-- Event snippet for غير ذلك conversion page -->
-<script>
-  gtag('event', 'conversion', {'send_to': 'AW-18300360567/ZsTHCKqvx9YcEPeupZZE'});
-</script>
+      gtag('config', 'AW-18300360567');
+    </script>
 
+    <!-- Event snippet for اتصالات صيانة أجهزة منزلية من الموقع conversion page -->
+    <script>
+    function gtag_report_conversion(url) {
+      var callback = function () {
+        if (typeof(url) != 'undefined') {
+          window.location = url;
+        }
+      };
+      gtag('event', 'conversion', {
+          'send_to': 'AW-18300360567/ACPMCN-i3dYcEPeupZZE',
+          'event_callback': callback
+      });
+      return false;
+    }
+    </script>
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -76,7 +87,7 @@
 
     <div class="container">
         <h1>صيانة المكيفات والثلاجات والغسالات بالرياض</h1>
-        <a href="tel:0544062166" class="call-button">
+        <a href="tel:0544062166" onclick="return gtag_report_conversion('tel:0544062166');" class="call-button">
             اتصل الآن <span class="phone-number">0544062166</span>
         </a>
     </div>
